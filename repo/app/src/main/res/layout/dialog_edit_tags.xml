@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <EditText android:id="@+id/tag_team_input" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="@string/hint_team" android:inputType="text" android:layout_marginBottom="8dp" />
+
+    <EditText android:id="@+id/tag_league_input" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="@string/hint_league" android:inputType="text" android:layout_marginBottom="8dp" />
+
+    <EditText android:id="@+id/tag_topic_input" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="@string/hint_topic" android:inputType="text" />
+</LinearLayout>

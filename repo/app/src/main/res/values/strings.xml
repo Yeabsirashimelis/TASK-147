@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Storefront</string>
+
+    <!-- Login -->
+    <string name="login">Login</string>
+    <string name="create_account">Create Account</string>
+    <string name="hint_username">Username</string>
+    <string name="hint_password">Password</string>
+    <string name="error_username_required">Username is required</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="account_locked">Account is locked. Contact administrator.</string>
+
+    <!-- Re-authentication -->
+    <string name="reauth_title">Re-authentication Required</string>
+    <string name="reauth_message">Please enter your password to continue with this sensitive operation.</string>
+    <string name="reauth_required">Re-authentication is required for this operation</string>
+    <string name="reauth_success">Identity verified</string>
+    <string name="error_reauth_failed">Re-authentication failed. Please try again.</string>
+
+    <!-- Audit Log -->
+    <string name="audit_log_title">Audit Log</string>
+
+    <!-- Backup/Restore -->
+    <string name="backup_restore">Backup &amp; Restore</string>
+    <string name="backup_description">Create a local backup of your data or restore from a previous backup. Both operations require re-authentication.</string>
+    <string name="create_backup">Create Backup</string>
+    <string name="restore_backup">Restore from Backup</string>
+    <string name="backup_success">Backup created successfully</string>
+    <string name="backup_failed">Backup failed: %1$s</string>
+    <string name="verify_failed">Backup verification failed: %1$s</string>
+    <string name="restore_success">Restore completed successfully. App will restart.</string>
+    <string name="restore_failed">Restore failed: %1$s</string>
+    <string name="restore_confirm_title">Confirm Restore</string>
+    <string name="restore_now">Restore Now</string>
+
+    <!-- Ingestion Console -->
+    <string name="ingestion_console_title">Ingestion Console</string>
+    <string name="alerts_title">Alerts</string>
+    <string name="add_source">Add Source</string>
+    <string name="schedule_ingestion">Schedule Ingestion</string>
+    <string name="view_all_logs">View All Logs</string>
+    <string name="logs">Logs</string>
+    <string name="run_now">Run Now</string>
+    <string name="edit">Edit</string>
+    <string name="acknowledge">Acknowledge</string>
+    <string name="ingestion_scheduled">Ingestion scheduled (every 6 hours, idle + charging)</string>
+    <string name="ingestion_success">Ingestion complete: %1$d articles stored</string>
+    <string name="ingestion_partial">Ingestion partial: %1$s</string>
+    <string name="ingestion_error">Ingestion failed: %1$s</string>
+
+    <!-- Source Rule Editor -->
+    <string name="source_editor_title">Source Rule Editor</string>
+    <string name="hint_source_name">Source Name</string>
+    <string name="hint_source_url">Feed URL</string>
+    <string name="hint_feed_type">Feed Type</string>
+    <string name="hint_parse_selector">Parse Selector (optional)</string>
+    <string name="filter_section_title">Allow/Block Lists</string>
+    <string name="hint_allowed_domains">Allowed domains (comma-separated)</string>
+    <string name="hint_blocked_domains">Blocked domains (comma-separated)</string>
+    <string name="hint_allowed_keywords">Allowed keywords (comma-separated)</string>
+    <string name="hint_blocked_keywords">Blocked keywords (comma-separated)</string>
+    <string name="pacing_section_title">Request Pacing</string>
+    <string name="hint_interval_hours">Interval (hours)</string>
+    <string name="hint_delay_ms">Request delay (ms)</string>
+    <string name="save_source">Save Source Rule</string>
+    <string name="source_saved">Source rule saved</string>
+    <string name="source_save_failed">Save failed: %1$s</string>
+    <string name="error_name_required">Name is required</string>
+    <string name="error_url_required">URL is required</string>
+
+    <!-- Ingestion Log -->
+    <string name="ingestion_log_title">Ingestion Log</string>
+
+    <!-- Data Quality -->
+    <string name="quality_dashboard_title">Batch Quality</string>
+    <string name="quality_errors_title">Validation Errors</string>
+    <string name="quality_total_items">Items: %1$d</string>
+    <string name="quality_error_count">Errors: %1$d</string>
+    <string name="quality_error_rate">Error rate: %.1f%%</string>
+    <string name="quality_passed">PASSED</string>
+    <string name="quality_failed">FAILED</string>
+
+    <!-- Article Browsing -->
+    <string name="home_title">Sports Headlines</string>
+    <string name="search_hint">Search articles...</string>
+    <string name="clear_filters">Clear</string>
+    <string name="no_articles">No articles found</string>
+    <string name="saved_articles">Saved</string>
+    <string name="saved_with_count">Saved (%1$d)</string>
+    <string name="no_saved_articles">No saved articles yet</string>
+    <string name="save_offline">Save for offline</string>
+    <string name="thumbnail_desc">Article thumbnail</string>
+    <string name="article_image_desc">Article image</string>
+
+    <!-- Cart -->
+    <string name="cart_title">Shopping Cart</string>
+    <string name="cart_empty">Your cart is empty</string>
+    <string name="coupon_hint">Coupon code</string>
+    <string name="apply">Apply</string>
+    <string name="remove">Remove</string>
+    <string name="subtotal">Subtotal</string>
+    <string name="discount">Discount</string>
+    <string name="tax">Tax</string>
+    <string name="total">Total</string>
+    <string name="proceed_to_checkout">Proceed to Checkout</string>
+
+    <!-- Checkout -->
+    <string name="checkout_title">Checkout</string>
+    <string name="order_summary">Order Summary</string>
+    <string name="checkout_items">%1$d items</string>
+    <string name="confirm_order">Confirm Order</string>
+    <string name="checkout_success">Order placed! ID: %1$s</string>
+    <string name="price_changed_title">Prices Updated</string>
+    <string name="price_changed_message">Your price lock has expired and some prices may have changed. Please review the updated totals before confirming.</string>
+    <string name="confirm_new_prices">Confirm New Prices</string>
+
+    <!-- Notifications -->
+    <string name="notifications_title">Notifications</string>
+    <string name="no_notifications">No notifications</string>
+    <string name="mark_all_read">Mark all read</string>
+
+    <!-- Editor/Analyst -->
+    <string name="editor_dashboard_title">Editor Dashboard</string>
+    <string name="curate_content">Curate Content</string>
+    <string name="investigate_failures">Investigate Failures</string>
+    <string name="recent_ingestion_runs">Recent Ingestion Runs</string>
+    <string name="pending_review_count">%1$d articles pending review</string>
+    <string name="content_curation">Content Curation</string>
+    <string name="no_pending_articles">No articles pending review</string>
+    <string name="failure_investigation">Failure Investigation</string>
+    <string name="validation_errors">Validation Errors</string>
+    <string name="approve">Approve</string>
+    <string name="reject">Reject</string>
+    <string name="feature">Feature</string>
+    <string name="tags">Tags</string>
+    <string name="reject_article">Reject Article</string>
+    <string name="reject_reason_hint">Reason (optional)</string>
+    <string name="edit_tags">Edit Tags</string>
+    <string name="save_tags">Save Tags</string>
+    <string name="hint_team">Team</string>
+    <string name="hint_league">League</string>
+    <string name="hint_topic">Topic</string>
+
+    <!-- Restore -->
+    <string name="restore_cancelled">Restore cancelled</string>
+
+    <!-- Receipt -->
+    <string name="receipts_title">Order History</string>
+    <string name="no_receipts">No orders yet</string>
+    <string name="receipt_detail_title">Receipt</string>
+    <string name="view_receipt">View Receipt</string>
+    <string name="order_history">Order History</string>
+
+    <!-- Access Denied -->
+    <string name="access_denied">Access denied</string>
+
+    <!-- Common -->
+    <string name="cancel">Cancel</string>
+    <string name="confirm">Confirm</string>
+</resources>

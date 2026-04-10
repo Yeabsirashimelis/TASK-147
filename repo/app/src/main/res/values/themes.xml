@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.Storefront" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/storefront_primary</item>
+        <item name="colorPrimaryVariant">@color/storefront_primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/storefront_secondary</item>
+        <item name="colorOnSecondary">@color/white</item>
+    </style>
+
+    <color name="storefront_primary">#1565C0</color>
+    <color name="storefront_primary_dark">#0D47A1</color>
+    <color name="storefront_secondary">#FF6F00</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Status colors -->
+    <color name="status_success">#4CAF50</color>
+    <color name="status_failure">#F44336</color>
+    <color name="status_running">#2196F3</color>
+    <color name="status_warning">#FF9800</color>
+    <color name="status_pending">#9E9E9E</color>
+</resources>
