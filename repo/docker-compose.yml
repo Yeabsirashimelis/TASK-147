@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   android-build:
     image: thyrlian/android-sdk:latest

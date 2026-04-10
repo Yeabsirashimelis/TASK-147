@@ -37,6 +37,7 @@ echo "Running unit tests via Gradle..."
 echo ""
 
 cd "$SCRIPT_DIR"
+chmod +x ./gradlew 2>/dev/null
 if ./gradlew test --tests "com.eaglepoint.storefront.security.*" \
                   --tests "com.eaglepoint.storefront.domain.*" \
                   --tests "com.eaglepoint.storefront.data.*" \
