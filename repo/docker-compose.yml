@@ -1,14 +1,11 @@
 services:
   test:
-    image: thyrlian/android-sdk:latest
+    image: ubuntu:22.04
     working_dir: /project
     volumes:
       - .:/project
-    environment:
-      - GRADLE_USER_HOME=/tmp/.gradle-home
     command: >
       bash -c "
-        find /project/.gradle -name '*.lock' -delete 2>/dev/null;
-        chmod +x ./gradlew ./run_tests.sh &&
+        chmod +x ./run_tests.sh &&
         ./run_tests.sh
       "
