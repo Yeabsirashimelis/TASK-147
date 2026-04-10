@@ -1,37 +1,13 @@
 services:
-  android-build:
-    image: thyrlian/android-sdk:latest
-    working_dir: /project
-    volumes:
-      - .:/project
-    environment:
-      - GRADLE_USER_HOME=/project/.gradle-cache
-    command: >
-      bash -c "
-        echo '=== Storefront Android Build & Test ===' &&
-        chmod +x ./gradlew &&
-        ./gradlew test --console=plain --no-daemon 2>&1;
-        TEST_EXIT=$$?;
-        echo '';
-        echo '=== Test Results ===';
-        if [ $$TEST_EXIT -eq 0 ]; then
-          echo 'ALL TESTS PASSED';
-        else
-          echo 'SOME TESTS FAILED';
-        fi;
-        exit $$TEST_EXIT
-      "
-
   test:
     image: thyrlian/android-sdk:latest
     working_dir: /project
     volumes:
       - .:/project
     environment:
-      - GRADLE_USER_HOME=/project/.gradle-cache
+      - GRADLE_USER_HOME=/tmp/.gradle-cache
     command: >
       bash -c "
-        chmod +x ./gradlew &&
-        chmod +x ./run_tests.sh &&
+        chmod +x ./gradlew ./run_tests.sh &&
         ./run_tests.sh
       "
