@@ -5,9 +5,10 @@ services:
     volumes:
       - .:/project
     environment:
-      - GRADLE_USER_HOME=/tmp/.gradle-cache
+      - GRADLE_USER_HOME=/tmp/.gradle-home
     command: >
       bash -c "
+        find /project/.gradle -name '*.lock' -delete 2>/dev/null;
         chmod +x ./gradlew ./run_tests.sh &&
         ./run_tests.sh
       "

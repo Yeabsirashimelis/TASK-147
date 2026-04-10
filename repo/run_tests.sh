@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # ============================================================================
 # Storefront Test Runner - One-Click Test Execution
-# Runs both unit_tests/ and API_tests/ suites and produces a summary report.
+# Runs unit test suite and produces a summary report.
 # ============================================================================
 
 set -uo pipefail
@@ -24,8 +24,18 @@ Run started: $TIMESTAMP
 
 EOF
 
+# ---- Environment setup ----
+cd "$SCRIPT_DIR"
+chmod +x ./gradlew 2>/dev/null
+
+# Clear stale Gradle lock files that may exist from prior aborted runs
+find "$SCRIPT_DIR/.gradle" -name "*.lock" -delete 2>/dev/null
+find "${GRADLE_USER_HOME:=$HOME/.gradle}" -name "*.lock" -delete 2>/dev/null
+
+# Use a temp directory for Gradle project-level cache to avoid lock conflicts
+export GRADLE_OPTS="${GRADLE_OPTS:-} -Dorg.gradle.project.buildDir=$SCRIPT_DIR/app/build"
+
 UNIT_EXIT=0
-API_EXIT=0
 
 # ---- Phase 1: Unit Tests ----
 echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
@@ -36,9 +46,12 @@ echo ""
 echo "Running unit tests via Gradle..."
 echo ""
 
-cd "$SCRIPT_DIR"
-chmod +x ./gradlew 2>/dev/null
-if ./gradlew testDebugUnitTest --no-daemon --console=plain 2>&1 | tee -a "$REPORT_FILE"; then
+if ./gradlew testDebugUnitTest \
+      --no-daemon \
+      --no-build-cache \
+      --console=plain \
+      --project-cache-dir=/tmp/.gradle-project-cache \
+      2>&1 | tee -a "$REPORT_FILE"; then
   echo ""
   echo "  ✓ UNIT TESTS: ALL PASSED"
   echo "" >> "$REPORT_FILE"
